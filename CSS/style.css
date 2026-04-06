@@ -12,6 +12,17 @@ Body    {
     height: 100vh;
 }
 
+footer {
+    
+    display: flex;
+    background-color: #222;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: #fff;
+    
+
+}
+
 h1{
     margin: 0;
 }
@@ -231,4 +242,10 @@ nav a:hover{
 
 .coisa p {
     color: #6B7280;
+}
+
+.titlebox {
+
+    font-family: 'Iosevka Charon';
+
 }
