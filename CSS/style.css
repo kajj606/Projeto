@@ -246,10 +246,6 @@ nav a:hover{
     color: #6B7280;
 }
 
-.titlebox {
-
-    font-family: 'Iosevka Charon';
-}
 
 .nome_form{
     font-size: 1.1rem;
@@ -264,4 +260,69 @@ nav a:hover{
   background-color: transparent;
   border-radius: 20px;
   width: 100%;
+}
+
+footer {
+    background-image: url('../IMAGENS/wave-haikei.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'poppins';
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;   
+    align-items: flex-start;  
+    gap: 80px;               
+    flex-wrap: wrap;           
+    text-align: left;
+    margin-right: 5vw;
+}
+
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;  
+        align-items: center;     
+        text-align: center;
+    }
+
+    .footer-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.footer-item {
+    max-width: 250px;
+}
+
+
+.coisinha {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+.redes {
+    display: flex;
+    gap: 7px;
+}
+
+.redes button {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: none;
+    background-color: #3A5FC8;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.redes button:hover {
+    background-color: #1E4E79;
 }
