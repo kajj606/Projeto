@@ -171,11 +171,15 @@ nav a:hover{
     font-size: 1.1rem;
     cursor: pointer;
     transition: 0.3s;
-    width: 60%;
-    max-width: 250px;
+    width: 200px;
+    min-width: 150;
     margin-top: 20px;
     margin-bottom: 20px;
+    
 }
+.botoes_doe{
+    display: flex;
+    gap: 20px;
 .main-box-Doe button:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
