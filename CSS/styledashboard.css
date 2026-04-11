@@ -92,7 +92,7 @@ header p {
 }
 
 #subtitulo {
-    margin-left: 10%;
+    margin-left: 4%;
 }
 
 .card_relato {
@@ -121,8 +121,8 @@ header p {
 }
 
 .card_relato img {
-    width: 80px;
-    height: 80px;
+    width: 95px;
+    height: 95px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
