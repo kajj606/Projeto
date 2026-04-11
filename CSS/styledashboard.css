@@ -92,7 +92,8 @@ header p {
 }
 
 #subtitulo {
-    margin-left: 4%;
+    margin-left: 60px;
+    color: #01517d;
 }
 
 .card_relato {
@@ -103,8 +104,8 @@ header p {
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     margin: 20px auto;
-    margin-top: 80px;
-    height: 300px;
+    margin-top: 50px;
+    height: auto;
     
 }
 .texto_relato {
