@@ -181,8 +181,8 @@ h1 {
     content: '';
     position: absolute;
     top: 30px;
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
     background: #1DA1F2;
     border-radius: 50%;
     z-index: 2;
