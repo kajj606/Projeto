@@ -332,3 +332,7 @@ footer {
 .redes button:hover {
     background-color: #1E4E79;
 }
+
+.apelo {
+    border-radius: 50px;
+}
