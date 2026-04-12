@@ -5,11 +5,15 @@ Body    {
 
 }
 
+* {
+    box-sizing: border-box;
+}
+
 .Home {
     background-image: url('../IMAGENS/background.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 footer {
@@ -335,4 +339,90 @@ footer {
 
 .apelo {
     border-radius: 50px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    /* NAV */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .Links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    /* TITULO */
+    .titulo {
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    /* CAIXAS */
+    .caixas {
+        flex-direction: column;
+        margin-top: 10vh;
+        gap: 20px;
+    }
+
+    .caixa, .caixa2 {
+        width: 80%;
+    }
+
+    /* IMPACTO */
+    .impacto {
+        height: auto;
+        font-size: 1.2rem;
+    }
+
+    /* DOE */
+    #doe-pai {
+        flex-direction: column;
+    }
+
+    .main-box-Doe {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .botoes_doe {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* TRABALHE */
+    #trabalhe-pai {
+        flex-direction: column;
+    }
+
+    /* RESULTADOS */
+    .resultados {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* COISAS */
+    .coisas {
+        flex-direction: column;
+        margin-left: 0;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .coisas img {
+        padding-left: 0;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
 }
