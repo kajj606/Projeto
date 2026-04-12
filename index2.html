@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Calculadora de Banho</title>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Boldonse&display=swap');
+    body {
+        margin: 0;
+        font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+        background: #a9b8cc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        flex-direction: column;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .main {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .circle-container {
+        position: relative;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 15px solid #c7d4e8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .circle-progress {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 15px solid transparent;
+        border-top: 15px solid #2f6fd6;
+        transform: rotate(0deg);
+        transition: 0.3s;
+    }
+
+    /* IMAGEM */
+   .circle-container img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+    .value {
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    .label {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .side-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    input[type="range"] {
+        margin-top: 30px;
+        width: 300px;
+    }
+
+    .resultado {
+        margin-top: 20px;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .mensagem {
+        margin-top: 15px;
+        font-size: 14px;
+        max-width: 300px;
+        text-align: center;
+        color: #333;
+    }
+
+    .toggle {
+        margin-top: 20px;
+    }
+
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        border: none;
+        background: #2f6fd6;
+        color: white;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: cyan;
+        height: 8vh;
+    }
+</style>
+</head>
+
+<body>
+    <nav>
+
+    </nav>
+<main>
+<h2>Quanto tempo dura seu banho?</h2>
+
+<div class="main">
+
+    <div class="circle-container">
+        <div class="circle-progress" id="progress"></div>
+
+        <!-- IMAGEM RELACIONADA A BANHO. -->
+        <img id="imagem" src="https://cdn-icons-png.flaticon.com/512/3105/3105807.png">
+    </div>
+
+    <div class="side-info">
+        <div class="value"><span id="valor">5</span></div>
+        <div class="label">minutos</div>
+    </div>
+
+</div>
+
+<input type="range" min="1" max="20" value="5" id="slider">
+
+<!-- MENSAGEM DINÂMICA -->
+<div class="mensagem" id="mensagem">
+    Um banho curto já ajuda muito a economizar água 💧
+</div>
+
+<div class="toggle">
+    Chuveiro econômico?
+    <input type="checkbox" id="eco">
+</div>
+
+<button onclick="calcular()">Calcular</button>
+
+<div class="resultado" id="resultado"></div>
+
+</main>
+
+<script>
+    const slider = document.getElementById("slider");
+    const valor = document.getElementById("valor");
+    const progress = document.getElementById("progress");
+    const imagem = document.getElementById("imagem");
+    const mensagem = document.getElementById("mensagem");
+
+    slider.addEventListener("input", () => {
+        let minuto = slider.value;
+
+        valor.innerText = minuto;
+
+        let deg = minuto * 18;
+        progress.style.transform = "rotate(" + deg + "deg)";
+
+        // IMAGENS + MENSAGENS
+        if (minuto <= 5) {
+            imagem.src = "https://cdn-icons-png.flaticon.com/512/3105/3105807.png"; // umas gotas ai
+            mensagem.innerText = "Ótimo! Banhos curtos economizam muita água 💧";
+        } 
+        else if (minuto <= 10) {
+            imagem.src = "https://cdn-icons-png.flaticon.com/512/2859/2859569.png"; //  banheira
+            mensagem.innerText = "Banhos longos aumentam bastante o consumo de água 🚿";
+        } 
+        else if (minuto <= 15) {
+            imagem.src = "https://cdn-icons-png.flaticon.com/512/728/728093.png"; // alerta com gota
+            mensagem.innerText = "Atenção! Você já pode estar gastando mais água do que o necessário.";
+        } 
+        else {
+            imagem.src = "https://cdn-icons-png.flaticon.com/512/564/564619.png"; // alerta, tá gastando muito pvt.
+            mensagem.innerText = "Cuidado! Isso representa um grande desperdício de água 🌎";
+        }
+    });
+
+    function calcular() {
+        let minutos = slider.value;
+        let eco = document.getElementById("eco").checked;
+
+        let litrosPorMin = eco ? 6 : 9;
+
+        let consumo = minutos * litrosPorMin * 365;
+
+        document.getElementById("resultado").innerHTML =
+            "🌎 Você usa aproximadamente <b>" + consumo + " litros</b> por ano!";
+    }
+</script>
+
+</body>
+</html>

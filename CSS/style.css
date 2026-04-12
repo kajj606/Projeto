@@ -1,0 +1,334 @@
+Body    {   
+
+    margin: 0;
+    background: #f5f7fa;
+
+}
+
+.Home {
+    background-image: url('../IMAGENS/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+footer {
+    
+    display: flex;
+    background-color: #222;
+    flex-flow: row wrap;
+    justify-content: center;
+    color: #fff;
+    
+
+}
+
+h1{
+    margin: 0;
+}
+
+.Links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    margin-right: 4vw;
+    font-family: 'Poppins';
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    color: lightblue;
+}
+
+.caixas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+    align-items: center;
+    font-family: 'Poppins';
+    margin-top: 30vh;
+}
+
+.caixa {
+    background: rgba(0, 119, 182, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    width: 250px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caixa:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.caixa2:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+
+.caixa2 {
+    background-color: #dff3ff;
+    color: black;
+    width: 250px;
+    border-radius: 10px;
+    padding: 20px;
+     backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caixa h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.container-titulo{
+    display: flex;
+    justify-content: center;
+}
+
+
+.titulo {
+    display: inline-block;
+    margin-top: 10vh;
+    font-family: 'Oswald';
+    color: aliceblue;
+    font-size: 4rem;
+    margin-bottom: 40px;
+    background: linear-gradient(to bottom, white, #7ec8f5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+     transition: transform 0.4s ease;
+}
+
+.impacto {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #023E8A, #0077B6);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  height: 1.5rem;
+}
+
+.impacto p {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.titulo:hover{
+    transform: scale(1.1);
+}
+
+
+#doe-pai {
+    display: flex;
+}
+#trabalhe-pai{
+    display: flex;
+}
+.main-box-Doe {
+    flex: 1;
+    width: 50%;
+    height: 60vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #f5f7fa;
+
+}
+.main-box-Doe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.main-box-Doe h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    margin-top: 20px;
+    color: #0d3b66;
+}
+.main-box-Doe button {
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #1d6fa5, #4dabf7);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 200px;
+    min-width: 150;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+.botoes_doe{
+    display: flex;
+    gap: 20px;
+}
+
+.main-box-Doe button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.main-box-Doe button:active {
+    transform: scale(0.98);
+}
+
+.main-box-Doe p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+#box1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-doe {
+    font-family: 'Poppins';
+    color: #1DA1F2;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.titulo-pai {
+    align-items: center;
+    margin-top: 9vh;
+}
+
+.resultados {
+    color: #2ECC71;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.coisas {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    align-items: center;
+    margin-left: 5vw;
+}
+
+.coisas img {
+    background: transparent;
+    max-width: 100%;
+    height: auto;
+    width: 3rem;
+    padding-left: 2rem;
+}
+
+.coisa {
+    padding-bottom: 15px;
+    margin-bottom: 10vh;
+}
+
+.coisa h3 {
+    color: #0D3B66;
+}
+
+.coisa p {
+    color: #6B7280;
+}
+
+
+.nome_form{
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+.pergunta{
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+  width: 100%;
+}
+
+footer {
+    background-image: url('../IMAGENS/wave-haikei.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'poppins';
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;   
+    align-items: flex-start;  
+    gap: 80px;               
+    flex-wrap: wrap;           
+    text-align: left;
+    margin-right: 5vw;
+}
+
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;  
+        align-items: center;     
+        text-align: center;
+    }
+
+    .footer-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+.footer-item {
+    max-width: 250px;
+}
+
+
+.coisinha {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: auto;
+}
+
+.redes {
+    display: flex;
+    gap: 7px;
+}
+
+.redes button {
+    width: 50px;
+    height: 50px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: none;
+    background-color: #3A5FC8;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.redes button:hover {
+    background-color: #1E4E79;
+}

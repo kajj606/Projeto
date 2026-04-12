@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(231, 244, 255);
+}
+
+header {
+    text-align: center;
+}
+
+header h4 {
+    padding: 50px 20px;
+    background: linear-gradient(to right, #023E8A, #0077B6);
+    color: white;
+    font-weight: 550;
+    padding: 1%;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #01517d;
+}
+
+header p {
+    font-size: larger;
+    color: #01517d;
+}
+
+#todos_cards {
+    display: flex;
+    justify-content: center;
+    margin: 100px;
+    gap: 20px;
+}
+#todos_cards .cards {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#todos_cards .cards:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.cards {
+    width: 300px;
+    border: none;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 200px;
+}
+.topo {
+    height: 100px;
+    background: linear-gradient(135deg, #1d6fa5, #4dabf7);;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+.conteudo {
+    padding: 20px;
+}
+.conteudo h2 {
+  color: #033d93;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.conteudo p {
+  color: #3c3c3c;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.cards img{
+    padding: 20px
+}
+
+.gota_icone {
+  width: 100px !important;
+  margin-top: -4px  !important;
+}
+.pessoas_icone {
+    padding: 30px !important
+}
+
+#subtitulo {
+    margin-left: 60px;
+    color: #01517d;
+}
+
+.card_relato {
+    width: 520px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    margin-top: 50px;
+    height: auto;
+    
+}
+.texto_relato {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+.nome_relato {
+    font-weight: bold;
+    color: #0d3b66;
+}
+#historias_impacto {
+    display: flex;
+}
+
+.card_relato img {
+    width: 95px;
+    height: 95px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
