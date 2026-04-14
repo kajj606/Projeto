@@ -13,13 +13,15 @@ header {
     text-align: center;
 }
 
-header h4 {
-    padding: 50px 20px;
+.navbar {
     background: linear-gradient(to right, #023E8A, #0077B6);
     color: white;
-    font-weight: 550;
-    padding: 1%;
-    margin-bottom: 30px;
+    padding: 15px 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+       position: relative;
 }
 
 header h1 {
@@ -127,4 +129,39 @@ header p {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 15px;
+}
+
+.logo {
+    margin: 0;
+}
+
+.cabecalho {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    white-space: nowrap;
+}
+
+.cabecalho h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.menu a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    margin-right: 20px;
+}
+
+.menu {
+    margin-left: 20px;
+}
+
+.logo, .menu {
+    z-index: 1;
 }
