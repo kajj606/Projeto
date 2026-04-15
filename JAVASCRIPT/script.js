@@ -20,3 +20,13 @@ enviar.addEventListener('click', function(){
 });
 
 document.body.style.boxShadow = "inset 0 0 50px rgba(0,0,0,0.05)";
+
+
+const form = document.getElementById("my-form");
+
+form.addEventListener("submit", function(e) {
+    e.preventDefault(); 
+
+    form.style.display = "none";
+    document.getElementById("texto_agradecimento").style.display = "block";
+});
