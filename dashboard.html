@@ -77,32 +77,36 @@
             </div>
         </section>
 
-        <h2 id="subtitulo">Relatos</h2>
+        <h2 id="subtitulo">Histórias Reais</h2>
         
         <section id="historias_impacto">
-            
+            <button class="btn prev">❮</button>
 
-            <div class="card_relato">
-                <img src="IMAGENS/davi_brito.jpeg" alt="">
+            <div class="carrossel">
+                <div class="card_relato ativo">
+                    <img src="IMAGENS/davi_brito.jpeg" alt="">
+                    <h3 class="nome_relato">Davi</h3>
+                    <p class="texto_relato">"Já ajudamos diversas familias, ver o impacto positivo que causamos é o que nos motiva à continuar indo em frente com o projeto!"</p>
+                    <p class="funcao">Colaborador da Causa</p>
+                </div>
 
-                <h3 class="nome_relato">Davi</h3>
-                <p class="texto_relato">"Já ajudamos diversas familias, ver o impacto positivo que causamos é o que nos motiva à continuar indo em frente com o projeto!"</p>
-                <p class="funcao">Colaborador da Causa</p>
+                <div class="card_relato">
+                    <img src="IMAGENS/alan_turing.jpg" alt="">
+                    <h3 class="nome_relato">Alan</h3>
+                    <p class="texto_relato">"É muito gratificante ver o alcance que o projeto está tomando, e como eles são capazes de ajudar tantas vidas."</p>
+                    <p class="funcao">Morador</p>
+                </div>
+
+                <div class="card_relato">
+                    <img src="IMAGENS/davy_jones.jfif" alt="">
+                    <h3 class="nome_relato">Gustavo</h3>
+                    <p class="texto_relato">"Minha familia vive melhor graças ao projeto! Antes não tinhamos acesso à água limpa, mas o projeto mudou isso."</p>
+                    <p class="funcao">Residente</p>
+                </div>
+
             </div>
-            <div class="card_relato">
-                <img src="IMAGENS/alan_turing.jpg" alt="">
 
-                <h3 class="nome_relato">Alan</h3>
-                <p class="texto_relato">"É muito gratificante ver o alcance que o projeto está tomando, e como eles são capazes de ajudar tantas vidas."</p>
-                <p class="funcao">Morador de uma das Comunidades Atendidas</p>
-            </div>
-            <div class="card_relato">
-                <img src="IMAGENS/davy_jones.jfif" alt="">
-
-                <h3 class="nome_relato">Gustavo</h3>
-                <p class="texto_relato">"Minha familia vive melhor graças ao projeto! Antes não tinhamos acesso à água limpa, mas o projeto mudou isso."</p>
-                <p class="funcao">Residente da Zona Rural</p>
-            </div>
+            <button class="btn next">❯</button>
         </section>
 
     </main>
@@ -110,5 +114,26 @@
     <footer>
 
     </footer>
+    <script>
+        const cards = document.querySelectorAll('.card_relato');
+        let index = 0;
+
+        function atualizarCarrossel() {
+            cards.forEach(card => card.classList.remove('ativo'));
+            cards[index].classList.add('ativo');
+        }
+
+        document.querySelector('.next').addEventListener('click', () => {
+            index = (index + 1) % cards.length;
+            atualizarCarrossel();
+        });
+
+        document.querySelector('.prev').addEventListener('click', () => {
+            index = (index - 1 + cards.length) % cards.length;
+            atualizarCarrossel();
+        });
+
+        atualizarCarrossel();
+    </script>
 </body>
 </html>

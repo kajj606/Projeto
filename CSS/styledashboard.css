@@ -4,7 +4,10 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+.titulo {
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
 body {
     background-color: rgb(231, 244, 255);
 }
@@ -38,7 +41,7 @@ header p {
 #todos_cards {
     display: flex;
     justify-content: center;
-    margin: 100px;
+    margin: 40px 0;
     gap: 20px;
 }
 #todos_cards .cards {
@@ -51,7 +54,7 @@ header p {
 }
 
 .cards {
-    width: 300px;
+    width: 350px;
     border: none;
     overflow: hidden;
     text-align: center;
@@ -94,26 +97,43 @@ header p {
 }
 
 #subtitulo {
-    margin-left: 60px;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-top: 60px;
+    margin-bottom: 20px;
     color: #01517d;
+    position: relative;
+}
+#subtitulo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #0077B6;
+    margin: 10px auto 0;
+    border-radius: 2px;
 }
 
 .card_relato {
-    width: 520px;
+    width: 420px;
+    min-height: 280px;
     background: white;
     padding: 20px;
     border-radius: 20px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin: 20px auto;
-    margin-top: 50px;
-    height: auto;
-    
+
+    transition: all 0.4s ease;
+    opacity: 0.4;
+    transform: scale(0.8);
+    filter: blur(2px);
 }
 .texto_relato {
     font-style: italic;
     color: #555;
     margin-bottom: 10px;
+    line-height: 1.5;
+    padding: 0 10px;
 }
 .nome_relato {
     font-weight: bold;
@@ -220,4 +240,62 @@ header p {
     body {
         overflow-x: hidden;
     }
+}
+#historias_impacto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: 10px;
+}
+
+.carrossel {
+    display: flex;
+    gap: 40px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+
+.card_relato.ativo {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+    z-index: 2;
+}
+
+.carrossel::before,
+.carrossel::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 3;
+}
+
+.carrossel::before {
+    left: 0;
+    background: linear-gradient(to right, rgb(231, 244, 255), transparent);
+}
+
+.carrossel::after {
+    right: 0;
+    background: linear-gradient(to left, rgb(231, 244, 255), transparent);
+}
+
+.btn {
+    background: #0077B6;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.btn:hover {
+    background: #023E8A;
 }
