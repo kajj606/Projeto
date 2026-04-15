@@ -160,17 +160,7 @@ body {
 }
 
 @media (max-width: 768px) {
-     header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-    
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
+
     .linha-tempo::after {
         left: 20px;
         transform: none;
@@ -210,4 +200,5 @@ h1 {
     font-size: 1.1rem;
     letter-spacing: 0.5px;
     opacity: 0.9;
+}
 }
