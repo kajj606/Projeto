@@ -17,5 +17,6 @@ enviar.addEventListener('click', function(){
         fomr.style.display = 'none'
         trabalhe_conosco.style.display = 'none'
     }
-})
+});
 
+document.body.style.boxShadow = "inset 0 0 50px rgba(0,0,0,0.05)";
