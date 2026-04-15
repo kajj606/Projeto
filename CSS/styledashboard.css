@@ -299,3 +299,79 @@ header p {
 .btn:hover {
     background: #023E8A;
 }
+#comentarios {
+    margin-top: 80px;
+    padding: 40px 20px;
+    background: #f5f9ff;
+    text-align: center;
+}
+
+.titulo_comentarios {
+    font-size: 1.8rem;
+    color: #01517d;
+    margin-bottom: 20px;
+}
+
+
+.form_comentario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.form_comentario input,
+.form_comentario textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+.form_comentario textarea {
+    height: 100px;
+    resize: none;
+}
+
+.form_comentario button {
+    background: #0077B6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.form_comentario button:hover {
+    background: #023E8A;
+}
+
+/* LISTA */
+.lista_comentarios {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.comentario {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+.comentario h4 {
+    color: #0d3b66;
+    margin-bottom: 5px;
+}
+
+.comentario p {
+    color: #555;
+}
