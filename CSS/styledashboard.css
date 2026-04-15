@@ -165,3 +165,59 @@ header p {
 .logo, .menu {
     z-index: 1;
 }
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px) {
+
+    .Home {
+        background-position: center;
+        background-size: cover;
+        padding: 20px 10px;
+    }
+
+    .container-titulo {
+        margin-top: 5vh;
+        padding: 0 10px;
+    }
+
+    .titulo {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 5vh;
+    }
+
+    .caixas {
+        flex-direction: column;
+        margin-top: 5vh;
+        gap: 20px;
+    }
+
+    .caixa, .caixa2 {
+        width: 90%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    /* Ajuste de espaçamento interno */
+    .caixa h2 {
+        font-size: 1.2rem;
+    }
+
+    .Links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}

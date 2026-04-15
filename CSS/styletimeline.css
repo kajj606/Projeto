@@ -160,6 +160,17 @@ body {
 }
 
 @media (max-width: 768px) {
+     header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
     .linha-tempo::after {
         left: 20px;
         transform: none;
@@ -174,7 +185,6 @@ body {
     .marco::before {
         left: 12px;
     }
-}
 
 h1 {
   background: linear-gradient(90deg, #023E8A, #0077B6);
